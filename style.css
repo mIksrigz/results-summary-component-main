@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'hk_grotesk';
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('ttf');
+    font-weight: 100 900;
+}
+
+body{
+    background: rgb(100, 95, 95);
+    color: white;
+}
+.scores{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    inset: 30% 30% 50% 30%;
+    font-size: 2rem;
+}
+.score2{
+    font-family: 'hk_grotesk';
+    font-weight: 500;
+}
+.score3{
+    font-family: 'hk_grotesk';
+    font-weight: 700;
+}
+.score4{
+    font-family: 'hk_grotesk';
+    font-weight: 800;
+}
