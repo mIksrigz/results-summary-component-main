@@ -3,11 +3,13 @@
         src: url(./assets/fonts/static/HankenGrotesk-Medium.ttf);
         font-weight: 500;
     }
+
     @font-face {
         font-family: 'HankenGrotesk';
         src: url(./assets/fonts/static/HankenGrotesk-Bold.ttf);
         font-weight: 700;
     }
+
     @font-face {
         font-family: 'HankenGrotesk';
         src: url(./assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
@@ -15,24 +17,122 @@
     }
 
 
-@supports (font-variation-settings: normal) {
-    @font-face {
-        font-family: 'HankenGrotesk';
-        src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('ttf-variations');
-        font-weight: 100 1000;
+    @supports (font-variation-settings: normal) {
+        @font-face {
+            font-family: 'HankenGrotesk';
+            src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('ttf-variations');
+            font-weight: 100 1000;
+        }
     }
-}
 
-:root {
-    --ff: 'HankenGrotesk';
-    --fw-regular: 500;
-    --fw-bold: 700;
-    --fw-extra-bold: 800
-}
+    :root {
+        --Mobile: 375px;
+        --Desktop: 1440px;
 
-body {
-    background: rgb(100, 95, 95);
-    color: white;
-    font-family: var(--ff);
-    font-weight: var(--fw-regular);
-}
+        /*Scores text*/
+        --Light-red: hsl(0, 100%, 67%);
+        --Orangey-yellow: hsl(39, 100%, 56%);
+        --Green-teal: hsl(166, 100%, 37%);
+        --Cobalt-blue: hsl(234, 85%, 45%);
+
+        /*backgrounds (gradients)*/
+        --Light-slate-blue-bg: hsl(252, 100%, 67%);
+        --Light-royal-blue-bg: hsl(241, 81%, 54%);
+
+        --Violet-blue-bg-circle: hsla(256, 72%, 46%, 1);
+        --Persian-blue-bg-circle: hsla(241, 72%, 46%, 0);
+
+        --White: hsl(0, 0%, 100%);
+        --Pale-blue: hsl(221, 100%, 96%);
+        --Light-lavender: hsl(241, 100%, 89%);
+        --Dark-gray-blue: hsl(224, 30%, 27%);
+
+        /*Fonts*/
+        --ff: 'HankenGrotesk';
+        --fw-regular: 500;
+        --fw-bold: 700;
+        --fw-extra-bold: 800;
+        --fs-paragraphs: 1.125rem;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+    }
+
+    body {
+        background: var(--White);
+        font-family: var(--ff);
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-paragraphs);
+        /* text-align: center; */
+    }
+
+    .score-board {
+        --margin: 1rem;
+        --padding: 1rem;
+        --font-size: var(--fs-paragraphs);
+        --color: var(--Pale-blue);
+        --border-radius: 2rem;
+        text-align: center;
+    }
+
+    .average-score {
+        background: linear-gradient(
+            var(--Light-slate-blue-bg),
+             var(--Light-royal-blue-bg)
+        );
+        padding: var(--padding) calc(3 * var(--padding)) calc(2 * var(--padding));
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        color: var(--color);
+        text-align: center;
+    }
+
+    h1 {
+        --font-size: 1.25rem;
+        --color: var(--Light-lavender);
+
+        font-size: var(--font-size);
+        font-weight: var(--fw-regular);
+        color: var(--color);
+        margin-bottom: var(--margin);
+    }
+
+    .average-points{
+        --color: var(--Light-lavender);
+        display: grid;
+        place-content: center;
+        background: linear-gradient(
+            var(--Violet-blue-bg-circle),
+            #4c3cf1
+        );
+        width: 9rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        margin: 0 auto calc(1.5 *var(--margin));
+        color: var(--color);
+    }
+
+    .big-number{
+        --color: var(--White);
+        --font-size: 3.5rem;
+        --font-weight: var(--fw-extra-bold);
+        font-size: var(--font-size);
+        font-weight: var(--font-weight);
+        color: var(--color);
+        margin-bottom: calc(-0.5 * var(--margin));
+    }
+
+    .score-description{
+        --font-size: 1rem;
+        font-size: var(--font-size);
+    }
+
+    .big-text{
+        --font-size: 1.5rem;
+        font-size: var(--font-size);
+    }
