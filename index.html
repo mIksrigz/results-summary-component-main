@@ -4,13 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
   <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
       font-size: 11px;
@@ -27,38 +22,46 @@
 <body>
 
   <main>
-    <section class="score-board">
-      <div class="average-score">
-        <h1>Your Result</h1>
-        <p class="average-points">
-          <span class="big-number">76</span><br />
-          of 100
-        </p>
-        <h2 class="big-text">Great</h2>
-        <p class="score-description">You scored higher than 65% of the people who have taken these tests.</p>
+    <section class="result-section big-gap">
+      <h1>Your Result</h1>
+      <p class="result-section-score small-gap">
+        <span>76</span>
+        of 100
+      </p>
+      <div class="result-section-description small-gap">
+        <h2>Great</h2>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
       </div>
-      <div class="all-scores">
-        <h2>Summary</h2>
-        <div class="scores">
-          <p class="category-score">
-            <span class="accent-text accent-text-reaction">Reaction</span>
-            <span>80 <span class="max-points">/ 100</span></span>
-          </p>
-          <p class="category-score">
-            <span class="accent-text accent-text-memory">Memory</span>
-            <span>92 <span class="max-points">/ 100</span></span>
-          </p>
-          <p class="category-score">
-            <span class="accent-text accent-text-verbal">Verbal</span>
-            <span>61 <span class="max-points">/ 100</span></span>
-          </p>
-          <p class="category-score">
-            <span class="accent-text accent-text-visual">Visual</span>
-            <span>72 <span class="max-points">/ 100</span></span>
-          </p>
+    </section>
+    <section class="summary-section big-gap">
+      <h2 class="summary-section-title">Summary</h2>
+      <div class="all-scores small-gap">
+        <div class="space-between">
+          <div class="score-title">
+            <h3>Reaction</h3>
+          </div>
+          <p class="points"><span>80</span> / 100</p>
         </div>
-        <button>Continue</button>
+        <div class="space-between">
+          <div class="score-title">
+            <h3>Memory</h3>
+          </div>
+          <p class="points"><span>92</span> / 100</p>
+        </div>
+        <div class="space-between">
+          <div class="score-title">
+            <h3>Verbal</h3>
+          </div>
+          <p class="points"><span>61</span> / 100</p>
+        </div>
+        <div class="space-between">
+          <div class="score-title">
+            <h3>Visual</h3>
+          </div>
+          <p class="points"><span>72</span> / 100</p>
+        </div>
       </div>
+      <button>Continue</button>
     </section>
   </main>
 
