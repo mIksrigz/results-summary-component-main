@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV/hub)
 - Live Site URL: [live site](https://result-summary-component-iksrigz.netlify.app/)
 
 ### Built with
