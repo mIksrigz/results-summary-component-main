@@ -236,6 +236,7 @@
         color: var(--lightest-text-clr);
         background: var(--dark-text-clr);
         padding: 0.85rem 0;
+        border-color: transparent;
         border-radius: 100px;
         cursor: pointer;
     }
@@ -261,13 +262,34 @@
     }
 
     @media (min-width: 600px) {
-        main{
+        main {
             max-width: 750px;
             grid-template-columns: 1fr 1fr;
             border-radius: 1rem;
             overflow: hidden;
         }
-        .result-section{
+
+        .result-section {
             border-radius: 2rem;
+        }
+    }
+
+    footer {
+        font-size: 0.8125rem;
+        color: var(--accent4);
+    }
+
+    footer a {
+        color: var(--accent4);
+        transition: color 250ms ease-out;
+    }
+
+    footer a:hover {
+        color: hsl(var(--accent4-hsl), 0.7);
+    }
+
+    @media(min-width: 600px) {
+        footer {
+            font-size: 1.125rem;
         }
     }
